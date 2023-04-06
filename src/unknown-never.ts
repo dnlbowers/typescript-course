@@ -1,12 +1,12 @@
 let userInput: unknown;
 
-let userName: string;
+let userName1: string;
 
 userInput = 5;
 userInput = 'Max';
 
 if (typeof userInput === 'string'){
-    userName = userInput;
+    userName1 = userInput;
 }
 
 // Never Type
