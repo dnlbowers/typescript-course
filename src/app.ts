@@ -1,11 +1,21 @@
-const button = document.querySelector('button')!; /* allows Ts to know its ok that the element is in the dom */
+// const username = 'Max';
+// // username = 'Manu'; // Error: cannot reassign a const!
+// let age = 30;
+// age = 29; // OK
 
-function clickHandler(message: string) {
-    // let message = 'Clicked!';
-    console.log('Clicked! ' + message);
+const add = (a: number, b: number = 1):number => a + b;
+
+console.log(add(2, 5));
+console.log(add(2));
+console.log(add(89));
+
+// const printOutput = (output: string | number) => console.log(output);
+const printOutput: (a:number |string) => void = output => console.log(output);
+
+const button = document.querySelector('button');
+
+if (button) {
+    button.addEventListener('click', event => console.log(event))
 }
 
-if(button) {
-    /* instead of the ! you could use a conditional check to see if the element is their at run time */
-    button.addEventListener('click', clickHandler.bind(null, 'You\'re welcome!'));
-}
+printOutput(add(5, 2));  
