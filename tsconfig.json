@@ -121,6 +121,7 @@
     "node_modules", //would be default is no exclude specified
     "src/analytics.ts",
     "src/config-demo.ts",
+    "src/es6-examples.ts"
   ],
   // "include": [
   //   // "src/**/*" wild cards can be used
