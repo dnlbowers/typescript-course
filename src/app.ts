@@ -12,6 +12,7 @@ class Department {
     }
 
     addEmployee(employee: string) {
+        // this.id = 'd2'
         this.employees.push(employee);
     }
 
@@ -20,18 +21,51 @@ class Department {
         console.log(this.employees);
     }
 }
+class ITDepartment extends Department {
 
-const accounting = new Department('d1', 'Accounting')
+    admins: string[];
 
-accounting.addEmployee('Max')
-accounting.addEmployee('Manu')
+    constructor(id: string, admins: string[]) {
+        super(id, 'IT');
+        this.admins = admins;
+
+    }
+
+}
+
+class AccountingDepartment extends Department {
+    constructor(id: string, private reports: string[]) {
+        super(id, 'Accounting');
+
+    }
+
+    addReport(text: string) {
+        this.reports.push(text);
+    }
+
+    printReports() {
+        console.log(this.reports);
+    }
+}
+
+
+const it = new ITDepartment('d1', ['David'])
+
+it.addEmployee('Max')
+it.addEmployee('Manu')
 
 // accounting.employees[2] = 'Anna';// this is not allowed because employees is private
 
-// console.log(accounting)
+console.log(it)
 
-accounting.describe();
-accounting.printEmployeeInformation();
+it.describe();
+it.printEmployeeInformation();
+
+const accounting = new AccountingDepartment('d2', []);
+accounting.addReport('Something went wrong...');
+console.log(accounting);
+accounting.printReports()
+
 
 // const accountingCopy = {name: 'COE', describe: accounting.describe };
 
