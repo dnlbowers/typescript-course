@@ -123,6 +123,7 @@
     "src/config-demo.ts",
     "src/es6-examples.ts",
     "src/classes.ts",
+    "src/interfaces.ts"
   ],
   // "include": [
   //   // "src/**/*" wild cards can be used
