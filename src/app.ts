@@ -40,7 +40,7 @@ type Universal = Combinable & Numeric; // this will be a number type because num
 // type guards
 
 function add(a: number, b: number): number;
-function add(a: string, b: string): string;
+function add(a: string, b: string): string; //function overloads to define the types of the parameters and the return type
 function add(a: Combinable, b: Combinable) {
     if(typeof a === 'string' || typeof b === 'string') {
         return a.toString() + b.toString();
@@ -52,6 +52,14 @@ const result = add('Max', 'Schwartz');
 result.split(' ');
 
 const result2 = add(1, 2)
+
+const fetchedUserData = {
+    id: 'u1',
+    name: 'Max',
+    job: {title: 'CEO', description: 'My own company'}
+};
+
+console.log(fetchedUserData?.job?.title);
 
 // type UnknownEmployee = Employee | Admin;
 
