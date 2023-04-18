@@ -63,7 +63,7 @@ console.log(fetchedUserData?.job?.title);
 
 const userInput = '';
 
-const storedData = userInput ?? 'DEFAULT'
+const storedData = userInput ?? 'DEFAULT' // nullish coalescing ?? operator
 
 console.log(storedData)
 
